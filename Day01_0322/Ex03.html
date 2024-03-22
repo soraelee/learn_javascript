@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let 
+        //let 키워드를 사용하여 변수를 만들면 다시 let을 사용할 수 없음
+        let name = '홍길동';
+        // let name = '김개똥'; //사용 불가
+
+        //var
+        //var 키워드를 사용하여 변수를 만들면 다시 var을 사용할 수 있음
+        var age = 20;
+        var age = 30;
+        console.log(age, name)
+
+        //const : 상수화 시킴 값 변경 불가
+        const key = '키키키키키';
+        // key = '값 변경???';
+        document.write(key);
+
+        const str01 = "안녕하세요\
+        그래 \
+        반갑다"; //역슬래시를 사용하면 엔터를 사용해야 할 부분을 자연스럽게 연결 가능
+
+        const str02 = `그래
+        반가워
+        서~!`; //혹은 백팁을 사용하기!
+
+        document.write(str01);
+        document.write('<br><b>' + str02 +'</b>'); //붉은 글씨로 표현하기
+        //br : 엔터의 의미
+    </script>
+    
+</body>
+</html>

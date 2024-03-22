@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 10;
+        let msg = "";
+        
+        if (num > 100)
+            msg = "100보다 크다";
+        else
+            msg = "100보다 작다";
+        document.write(msg)
+
+        document.write("<hr>")
+        num = 5;
+
+        if (num % 2 ==0) {
+            msg = "num은 짝수 이며 <br>";
+            msg += "2의 배수 입니다."
+        }
+        else {
+            msg = "num은 홀수 이며 <br>";
+            msg += "2의 배수 아닙니다"
+        }
+        document.write(msg)
+
+        document.write("<hr>");
+        const saveId = "aaa", savePwd = "aaa";
+        const inputId = "aaa1", inputPwd = "aaa";
+        if(saveId === inputId) {
+            if(savePwd === inputPwd){
+                msg = "인증 성공 !!"
+            }else{
+                msg = "비밀번호 틀림!!"
+            }
+        } else{
+            msg = "존재하지 않는 id 입니다."
+        }
+       // alert(msg) //알림 창을 띄우기
+       document.write(msg)
+
+       document.write("<hr>")
+       num = 150;
+        msg = "";
+       
+       if(num > 100){
+            msg += `${num}은 100보다 큰 수 <br>`;
+       }else if(num > 80){
+          msg += `${num}은 80보다 큰 수 <br>`;
+       }else if(num > 60){
+          msg += `${num}은 60보다 큰 수 <br>`;
+       }else{
+         msg += `${num}은 60보다 작은 수 <br>`;
+       }
+
+       document.write(msg + "<hr>")
+    </script>
+</body>
+</html>

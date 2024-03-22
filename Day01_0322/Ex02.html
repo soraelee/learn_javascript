@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+    //header 위 스크립트
+        let name = "홍길동";
+        let age = prompt('나이 입력');
+        document.write("학생 이름 : " + name + "<br>");
+        //document : 현재 페이지 , 입력 받음
+        document.write("학생 나이 :" + age + "<br>");
+
+        document.write(`이름 : ${name}님의 나이는 ${age}살 입니다<hr>`); //backtip : 내용을 작성하는데 어려움으 줄임
+        //hr : 줄 긋기
+        console.log(`age: ${typeof age}`); //우리가 입력 받은 값 타입 : string
+        let num = Number(age); //자료형 변환
+        console.log(`num : ${typeof num}`);
+        console.log(`num : ${typeof num.toString()}`); //문자형으로 변환하는 방법
+        console.log(`num : ${typeof (num + "")}`); //문자형으로 변환하는 방법
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

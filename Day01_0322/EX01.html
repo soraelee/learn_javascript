@@ -1,0 +1,35 @@
+<!DOCTYPE html> <!--!엔터 하면 기본 틀이 나옴-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 100; // 세미콜론 생략 가능
+        let str = "문자열" //문자열 사용 시 작은 따옴표, 큰따옴표 상관 없음
+        let fl = 1.123
+        let bool = true;
+        let arr = [1, 2, 3];
+        let obj = {num : '홍길동', "age" : 20}
+        let test;
+        console.log(num, typeof (num)); //system.out.print와 같음
+        console.log(str, typeof (str));
+        console.log(fl, typeof (fl));
+        console.log(bool, typeof (bool));
+        console.log(arr, typeof (arr));
+        console.log(obj, typeof (obj));
+        console.log(test, typeof (test));
+
+        num = [1, 2, 3];
+        console.log("------")
+        console.log("변경 후 : ", num, typeof num)
+        //  자바와 달리 자료형이 따로 없기 때문에 유연함
+        // 파이썬처럼 그릇에 담는 느낌
+        // 에러가 발생하면 사이트에서 확인할 수 있고 에러가 발생한 지점 이후 부터는 확인이 불가함
+        // => 한줄 한줄 번역하면서 실행함(자바는 컴파일 언어로 전체 문법검색을 진행 후 실행)
+    </script>
+    
+</body>
+</html>

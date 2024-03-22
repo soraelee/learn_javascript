@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let name = prompt('당신의 이름은?');
+        document.write(name);
+
+        let age = prompt(`${name}님의 나이는?`);
+        document.write(age);
+
+        let addr = prompt(`${name}님의 주소는?`);
+        document.write(addr);
+
+    //     document.write(`
+    //     <table border = "1" >
+    //     <tr>
+    //         <th>이름</th><th>나이</th><th>주소</th>
+    //     </tr>
+    //     <tr>
+    //         <td>${name}</td><td>${age}</td><td>${addr}</td>
+    //     </tr>
+    // </table>`)
+
+        document.write('<table border = "1">')
+            document.write("<tr>")
+                document.write("<th>이름</th><th>나이</th><th>주소</th>");
+            document.write("</tr>")
+            document.write("<tr>")
+                document.write(`<td>${name}</td><td>${age}</td><td>${addr}</td>`);
+            document.write("</tr>")
+        document.write("</table>")
+
+
+    </script>
+    
+
+    
+</body>
+</html>

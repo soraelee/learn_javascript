@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //수를 입력 받아 짝 홀수를 구분하여 출력하기
+    
+        let num1 = prompt("숫자를 입력하세요(짝/홀)")
+        document.write(num1 % 2 ? "홀수<br>" : "짝수<br>")
+        let num2 = prompt("숫자를 입력하세요(3의 배수)")
+        document.write(num2 % 3 == 0 ? num2 + "<br>" : "3의 배수 아님<br>")
+
+        let num3 = prompt("첫번째 수를 입력하세요")
+        let num4 = prompt("두번째 수를 입력하세요")
+        document.write(num3 > num4 ? num3 : num4)
+
+
+    </script>
+</body>
+</html>
