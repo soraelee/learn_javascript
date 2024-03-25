@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz03</title>
+    <style>
+        img {width: 500px;height: 500px;}
+        div {width: 500px; background: pink; text-align: center;}
+    </style>
+    <script>
+        onload = ()=> {
+            let img = document.getElementById("myImg");
+            img.addEventListener("click")
+        }
+
+        var imgArr = []
+        for (i = 1; i <= 8; i++){
+            let imgName = "최근상품0";
+            imgArr[i-1] = imgName + i+".jpg";
+        }
+
+        function preBtn(){
+            // let myImg = document.getElementById(imgArr[])
+        }
+        // document.write(imgArr)
+
+
+    </script>
+</head>
+<body>
+    <img id="myImg" src="최근상품01.jpg"><br>
+    <div>
+        <input type="button" onclick="preBtn()" value="이전으로" >
+        <input type="button" onclick="foreBtn()" value="다음으로">
+    </div>
+    
+</body>
+</html>

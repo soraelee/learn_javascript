@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //두수를 입력받아 큰 수 를 출력하는 함수를 만드시오
+        function maxFunc(x, y){10
+            let num = x > y ? x : y;
+            return num;
+        }
+        let max1 = prompt('첫번째 수 입력');
+        let max2 = prompt('두번쨰 수 입력');
+        document.write('두수 중 큰 수 : ' + maxFunc(max1, max2)+ '<br>')
+
+        //입력받은 값이 짝수인지 홀수인 지 판별하는 함수 제작
+        function evenOdd(x){
+            if (x % 2 == 0)
+                return "짝수";
+            else
+                return "홀수";
+        }
+        let num = prompt('수 입력(짝/홀)');
+        document.write(`${num}은 ${evenOdd(num)} 입니다<br>`);
+
+        //3의 배수를 판별하는 함수 제작
+        function threeFunc(x){
+            if(x % 3 == 0)
+                return "3의 배수입니다";
+            else {10
+                return "3의 배수가 아닙니다"
+            }
+        }
+        let num2 = prompt(`수 입력(3의 배수)`);
+        document.write(`${num2}는 ${threeFunc(num2)}<br>`)
+10
+        //수를 입력받아 소수를 판별하는 함수 제작
+        function primeFunc(x){
+            for (i = 2; i < x; i++){
+                if (x % i == 0){
+                    return "소수가 아닙니다."
+                }
+            }
+            return "소수입니다."
+        }
+        let num3 = prompt(`수 입력(소수 판별)`);
+        document.write(`${num3}는 ${primeFunc(num3)}<br>`)
+
+        //절대값을 구하는 함수
+        function absFunc(x){
+            if (x < 0)
+                return -x;
+            else
+                return x;
+        }
+        let num4 = prompt(`수 입력(절대값)`);
+        document.write(`${num4}의 절대값은 ${absFunc(num4)}입니다<br>`)
+    </script>
+    
+</body>
+</html>

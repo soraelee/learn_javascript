@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img { width: 100px;height: 200px;}
+    </style>
+    <script>
+        
+        // alert("myimg : " + document.getElementById("myImg")) //아직 페이지가 로드되지 않았으므로 이미지 값을 확인할 수 없음
+        onload = () =>{ //해당 페이지가 실행될 때 알림
+            // alert("myimg : " + document.getElementById("myImg")) //페이지가 로드된 후 이므로 이미지 값을 가져옴
+            // alert("execute")
+            let img = document.getElementById("myImg");
+            img.addEventListener("mouseover", changeFunc01)
+            img.addEventListener("mouseout", changeFunc01)
+                  
+        }
+        let num = 0;
+        changeFunc01 = () => { //클릭이나 마우스가 들어오면
+            const arr = ["kitty.png", "google.png"]
+            let myImg = document.getElementById("myImg");
+            let myImg02 = document.getElementById("myImg02");
+            myImg.src = arr[num];
+            myImg02.src = arr[num];
+            num = (num == 0) ? 1 : 0;
+            /*
+            if (num == 0){
+                myImg.src = arr[0];
+                myImg02.src = arr[1];
+                num = 1;
+            }
+            else{
+                myImg.src = arr[num];
+                myImg02.src = arr[num];
+                num = 0;
+            }
+            */
+        }
+       
+    </script>
+</head>
+<body>
+    <!--속성값 설정-->
+    <img id="myImg" src="kitty.png"><br>
+    <img id="myImg02" src="google.png" onmousedown="changeFunc01()"
+    onmouseup = "changeFunc01()"><br>
+</body>
+</html>

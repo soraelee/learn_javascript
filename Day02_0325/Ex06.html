@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test(x, y){
+            return x + y;
+        }
+        document.write(test(1, 2) + "<br>")
+        //익명함수
+        let sumFunc = function (x, y){
+            return x + y;
+        }
+        document.write(sumFunc(10, 20)+ "<br>")
+
+        let sumFunc1 =  (x, y) =>  x + y; //많이 쓰는 형태
+        //한줄인 경우 중괄호를 사용하지 않아도 return 사용하지 않아도 됨
+        document.write(sumFunc1(1000, 2000)+ "<br>")
+
+        let sumFunc2 =  (x, y) =>  {let num = 100; return x + y + num;}
+        //중괄호로 받을 경우 return 값을 무조건 사용해야 함 
+        document.write(sumFunc2(1000, 2000)+ "<br>")
+
+        const result01 = () =>{
+            10 + 20;
+        }
+        const result02 = () => 10 + 20;
+        const result03 = () => (10 + 20);
+
+        document.write("<hr>")
+        document.write(result01() + "<br>");
+        document.write(result02() + "<br>");
+        document.write(result03() + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function testFunc01(){
+            let num = 95;
+            let txt = "안녕하세요";
+            return num, txt;
+        }
+        const result = testFunc01();
+        document.write(result + "<hr>")
+
+        function testFunc02(){
+            let num = 95;
+            let txt = "안녕하세요";
+            const arr = [num, txt]
+            return arr;
+        }
+        const result2 = testFunc02();
+        document.write(result2 + "<br>")
+        document.write(result2[0] + "<br>")
+        document.write(result2[1] + "<hr>")
+
+        function testFunc03(){
+            let num = 95;
+            let txt = "안녕하세요";
+            const arr = {'num' : num, txt : txt}//object 타입 : 키와 값의 형태
+            return arr;
+        }
+        const result3 = testFunc03();
+        console.log(result3)
+        document.write(result3 + "<br>") //이때 키값이 어떤 타입을 가지는 지 출력 - object 타입
+        document.write(result3['num'] + "<br>")
+        document.write(result3.txt + "<br>")
+        
+    </script>
+</body>
+</html>

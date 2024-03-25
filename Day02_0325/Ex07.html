@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h3 {color : red}
+    </style>
+</head>
+<body>
+    <script>
+        //이벤트
+        //function clickEvent(){}
+        const clickEvent = () => {
+            // alert("클릭");
+            const name = document.getElementById("name"); //id를 토대로 tag 값을 가져옴
+            console.log(name);
+        //     name.value = "안녕하세요" //태그에 대한 속성으로 해당 값을 주세요
+        //    name.style = "background : red;"
+
+            const name1 = document.querySelector("#name2");
+            console.log(name1);
+            name1.value = name.value; //name의 value를 name2에 넣기
+            name.value = "";
+        }
+        window.onload = () => {//해당 페이지가 로드 될때 실행되는 함수
+            // alert("onload")
+            document.getElementsByClassName("btn") //클래스를 가져옴
+            const btn = document.querySelector(".btn");
+            console.log(btn)
+            btn.addEventListener("dblclick", innerTest); //이벤트를 설정함 //어떤 행동을 했을 때 어떤 함수 출력
+            //addEventListener을 사용할 때에는 이벤트 앞에 'on'을 붙이지 않음
+        }
+
+        const innerTest = () => {
+            //텍스트 값 얻어오기
+            const txt = document.getElementById("text"); //id text의 태그를 얻어옴
+            let msg = "<h3 id = 'h3'>내용 바꾸기</h3>" //변수 msg에 해당 내용을 넣어둠
+            // txt.innerHTML = msg; //해당하는 값을 HTML 형식으로 추가
+            txt.innerText = msg; //해당하는 값을 텍스트 환경으로 추가 (해당 내용이 텍스트가 됨)
+        }
+
+
+            </script>
+
+<input type="text" id = "name" placeholder="input name"><br> <!--해당 태그값을 이용해 속성을 변경함-->
+<input type="text" id = "name2" placeholder="input name"><br>
+
+<!-- 버튼을 클릭하면 해당 함수를 실행   -->
+<input type="button" onclick="clickEvent()" value="클릭">
+<input type="button" class="btn" value="클릭"> <!---->
+<!-- 버튼을 더블 클릭하면 해당 함수를 실행   -->
+<!-- <input type="button" ondblclick="clickEvent()" value="클릭">  -->
+<!-- 이벤트 설정 시 앞에 'on'을 붙임 -->
+<label id = "text">텍스트 값</label>
+</body>
+</html>
