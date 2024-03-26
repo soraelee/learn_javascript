@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = ['111', '222', '3333'];
+
+        //for each문 사용
+        for (let i = 0 ; i<data.length ; i++){
+            document.write(data[i] + "<br>");
+        }
+        document.write("<hr>");
+        //function t(d){console.log(d)}
+        const t = (d) => {console.log(d)}
+        data.forEach(t); //단순 출력(return값을 가질 수 없다) ()안에는 함수를 만들어줌
+        data.forEach((d) => {
+            document.write(d+"<br>");
+            // msg += d +"<br>";
+            // return msg;
+        }); 
+        // document.write("<hr>" + result+"<hr>")
+
+        //map() : 리턴 값을 가짐
+        // function t02(d){
+        //     return`<b style="color : blue;">${d}</b>`;
+        // }
+
+        const t02 =(d) => `<b style="color : red;">${d}</b>`; //한줄로 작성한경우 리턴 값을 따로 작성하지 않아도 됨
+        const mapData = data.map(t02);
+        document.write("<hr>" + mapData+"<hr>");
+
+        const mapData02 = data.map((d) => `<b style="color : yellow;">${d}</b>`);
+        document.write("<hr>" + mapData02+"<hr>")
+
+
+
+    </script>
+</body>
+</html>

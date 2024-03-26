@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let img;
+        function add(){
+            img = document.createElement('img'); // 태그를 생성함
+            console.log(img);
+
+            img.src = "kitty.png";
+            img.setAttribute("width", "100") //속성값 추가 가능
+            img.setAttribute("style", "height:100px; border:1px solid")
+
+            document.getElementById('test').appendChild(img);//태그 자체로 추가
+        }
+        function addTB(){ //테이블 만들기
+            let data = [
+                {id:'aaa', name:'홍길동'},
+                {id:'bbb', name:'김개똥'},
+            ]
+            let table = document.createElement('table');
+            data.forEach((value) => {
+                var tr = document.createElement('tr');
+                var td1 = document.createElement('td');
+                td1.innerHTML = value.id;
+                tr.appendChild(td1);
+
+                var td2 = document.createElement('td');
+                td2.innerHTML = value.name;
+                tr.appendChild(td2);
+
+                table.appendChild(tr)
+            })
+            document.getElementById("test").appendChild(table);
+        }
+        function remove(){
+            let items = document.getElementById('test')
+            // document.getElementById('test').remove(); //p라는 태그 자체가 삭제됨
+            // items.remove(); //p라는 태그 자체가 삭제됨
+            items.removeChild(items.childNodes[0]); //자식들 삭제(앞에서부터 삭제)
+            items.removeChild(items.childNodes[items.childNodes.length -1])// 뒤에서 부터 삭제되도록 함
+        }
+    </script>
+    <p id="test"></p>
+    <a href="#" onclick="addTB()">테이블 추가</a>
+    <b onclick="add()"> add 클릭</b><br>
+    <b onclick="remove()"> 이미지 삭제 클릭</b> <!--p라는 태그 자체가 삭제됨-->
+</body>
+</html>
