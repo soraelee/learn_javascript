@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        test = () => {
+            let txt = document.getElementById('txt');
+            if(txt.value == ""){
+                alert('값 입력하세여')
+                return; //종료하겠다
+            }
+            // fo.submit(); //이렇게 사용해도 되고, document로 가져와도 됨ㅁ
+            console.log(fo);
+            console.log(fo.txt);
+            console.log(fo.ddd); //해당 부분의 로그는 나오지 않음
+            
+            // console.log(fo.getElementById('ddd'));
+            let f = document.getElementById('fo');
+            //div의 경우
+            
+            console.log(f.querySelector('.div')); //클래스로는 값을 가져옴//직접 클래스 접근
+            // console.log(f.getElementById('ddd')); //id로는 가져올 수 없고
+            f.querySelector(".div").innerHTML ="다른값 변경"
+            document.getElementById('ddd').innerHTML = "다른 값 변경"
+        }
+    </script>
+</head>
+<body>
+    <form id='fo' action="Ex04.html"> 
+        <div id="ddd" class="div">aaa</div>
+        <input type="text" id="txt"><br>
+        <input type="submit" onclick="test()" value="submit 전송">
+        <!--무조건 동작시킴 : 검증할 때에는 submit 사용하면 안됨-->
+        <input type="button" onclick="test()" value="btn 전송">
+        <!--  확인 누를 시 동작하지 않음 : 검증 시 버튼 사용-->
+    </form>
+</body>
+</html>
